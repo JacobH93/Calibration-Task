@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<header>
+
+</header>
+<body>
+    <div class="SelectionBar">
+
+        <form class="Select" commandName="main" id="main" method="post">
+            <label for="Students">Please select a student to see their goals</label>
+    <select name="Name" id="Name">
+      <option value="Jacobh">Jacobh</option>
+      <option value="Giddy_code">Giddy_code</option>
+      <option value="Jacobt">Jacobt</option>
+      <option value="davidbee">davidbee</option>
+      <option value="Evan Callaghan">Evan Callaghan</option>
+      <option value="Josue Chigwira">Josue Chigwira</option>
+      <option value="Morgan Gant">Morgan Gant</option>
+      <option value="maddiee">maddiee</option>
+      <option value="grant">grant</option>
+      <option value="nick">nick</option>
+      <option value="nguyen">nguyen</option>
+      <option value="craig">craig</option>
+      <option value="danh1234">danh1234</option>
+    </select>
+
+    <input type="submit" name="submit" value="submit">
+        </form>
+    </div>
+    <div class="Display" id="Display">
+
+    </div>
+</body>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+    $('#main').submit(function (e){
+        e.preventDefault(); //prevent the form submission from reloading the page
+       var xmlhttp;
+
+       if (window.XMLHttpRequest) {
+           xmlhttp = new XMLHttpRequest();
+       }
+       else {
+           xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+       }
+
+       xmlhttp.onreadystatechange = function () {
+           if (xmlhttp.readyState == 4) {
+             var lines = xmlhttp.responseText;    //here we get all lines from text file*
+
+             intoArray(lines);
+           }
+       }
+
+       xmlhttp.open("GET", document.getElementById('Name').value + ".txt", true); //making Ajax request to get txt file based on selector value
+       xmlhttp.send();
+
+
+function intoArray (lines) {
+//here we are reading all of the lines and creating a new <p> child within the div "Display"
+            var lineArr = lines.split('\n');
+
+            document.getElementById('Display').innerHTML = ""; //Set Display back to empty if a previous student had all ready been selected
+
+            var parent = document.getElementById('Display');
+            var newChild = '<p> ' + lineArr + '</p>';
+            parent.insertAdjacentHTML('beforeend', newChild);
+
+
+            }
+      })
+
+});
+</script>
+<style>
+.SelectionBar {
+  margin: auto;
+  width: 50%;
+  border: 3px solid black ;
+  padding: 10px;
+}
+.Display {
+  margin: auto;
+  width: 70%;
+  border: 3px ;
+  padding: 10px;
+}
+</style>
