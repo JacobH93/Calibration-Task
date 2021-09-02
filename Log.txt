@@ -1,0 +1,44 @@
+Log of Time Breakdown
+
+Jacob
+
+Software Development
+
+Task planning - (Time Taken: 21 Minutes) 
+Tasks:
+
+2021-Aug-27: 2hours 4 mins: Develop an HTML/JS/CSS page that the user can access to display student goals from the txt files. Page will have a drop down menu with student names to make selection easier and eliminate user error. Page will also update one div asynchronously to display the selected students goals without refreshing the entire page.
+
+2021-Aug-30: 1hours 20 mins: Create a java function that will read in a text file and display its contents. This function will be called by the JS page on form submit. 
+
+2021-Aug-30: 20 mins: Create a Readme file detailing how to download and use code.
+
+(planned) Commit to Github
+
+Total time taken: 4hrs 5 mins.
+
+----- Power surge broke laptop. Everything lost. Starting from scratch with simpler JS/jquery/Ajax page -----
+
+2021-Sept-1: 9 mins: Task planning/Start Github repository 
+
+2021-Sept-1: 22 mins: Code basic HTML selection form and other HTML elements in webpage
+
+2021-Sept-1: 29 mins: Integrate Jquery to stop document reloading on form submittal
+
+2021-Sept-1: 43 mins: Research how to read in a text file using Ajax and a localhost
+
+2021-Sept-1: 15 mins: Setup localhost using XAMPP
+
+2021-Sept-1: 3 mins: CSS
+
+2021-Sept-1: 10 mins: Add text files to XAMPP folder
+
+2021-Sept-1: 11 mins: Try to break program
+
+2021-Sept-1: 3 mins: Commit to Github
+
+2021-Sept-1: 40 mins: Create Readme and video detailing setup
+
+2021-Sept-1: 2 mins: Commit again
+
+Total Time Taken: 3hrs 7mins
